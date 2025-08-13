@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="body-todo-formacao">
+    <header>
+        <nav class="desktop">
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="menu-flex">
+                    <img id="logo-mobile" src="logoEd.png" alt="Logo" class="logo">
+                    <i class="fa-duotone fa-solid fa-bars fa-2x" style="color: #ffff; margin: 10px;"></i>
+                </div>
+            </div>
+            <img id="logo-desktop" src="logoEd.png" alt="Logo" class="logo">
+            <ul id="nav-list" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="formacao">
+        <div class="conteudo-central-formacao">
+            <!-- Toggle Formação -->
+            <div class="toggle-section">
+                <button class="toggle-btn" onclick="toggleContent('formacao')">Formação Academica</button>
+                <div class="toggle-content" id="formacao">
+                    <ul>
+                        <li><b>Graduação em comércio Exterior</b></li>
+                        <li><b>Estácio de Sá</b> - Termino 2022</li>
+                        <li>Conhecimento em importação, exportação, logística internacional e legislação aduaneira.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Toggle Experiências -->
+            <div class="toggle-section">
+                <button class="toggle-btn" onclick="toggleContent('experiencias')">Experiências</button>
+                <div class="toggle-content" id="experiencias">
+                    <ul>
+                        <li><b>Indaiá:</b> 2016 - Atual</li>
+                        <li><b>Principais atividades:</b>desembaraço aduaneiro, coordenação de fretes internacionais, análise documental</li>
+                        <li><b>Resultados alcançados:</b> otimização de processos, redução de custos, melhorias na logística</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Toggle Competências -->
+            <div class="toggle-section">
+                <button class="toggle-btn" onclick="toggleContent('competencias')">Competências</button>
+                <div class="toggle-content" id="competencias">
+                    <ul>
+                        <li><b>Operacionais:</b> Desembaraço aduaneiro, classificação fiscal, conferência documental, acompanhamento de processos logísticos.</li>
+                        <li><b>Técnicas:</b> SAP, Siscomex, Microsoft Excel avançado, Power BI.</li>
+                        <li><b>Linguagens:</b> Inglês/Intermediário</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://linkedin.com" target="blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://wa.me/seunumero" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </footer>
+
+    <script>
+        function toggleContent(sectionId) {
+            const content = document.getElementById(sectionId);
+            content.style.display = (content.style.display === 'none' || !content.style.display) ? 'block' : 'none';
+        }
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navList = document.getElementById('nav-list');
+
+        // Adiciona o evento de clique para alternar a classe 'active' no menu
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
