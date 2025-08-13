@@ -3,7 +3,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4; /* Fundo diferente da Home */
-    height: 97vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -321,6 +321,7 @@ footer a:nth-child(2):hover {
         justify-content: flex-end;
         flex-direction: column;
         align-items: flex-end;
+        height:auto;
     }
 
     /*Sobre*/
